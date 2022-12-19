@@ -1,7 +1,7 @@
 boards:
   charuco_8x11:
     _type_: charuco
-    size: [11, 8]
+    size: [8, 11]
     aruco_dict: 4X4_1000
     
     square_length: 0.035

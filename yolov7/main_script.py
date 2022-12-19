@@ -5,28 +5,6 @@ import skeleton_triangulation
 import numpy as np
 import matplotlib as plt
 
-class camThread(threading.Thread):
-
-    def __init__(self, previewName, camId):
-        threading.Thread.__init__(self)
-        self.previewName = previewName
-        self.camId = camId
-        self.stream = cv2.VideoCapture(self.camId)
-        #Reading first frame
-        if self.stream.isOpened():
-            self.ret, self.frame = self.stream.read()
-
-    def run(self):
-        cap = cv2.VideoCapture(self.camId)
-        while cap.isOpened():
-        
-            (ret, frame) = cap.read()
-            
-            if ret == True:
-                #Extracting keypoints 
-                self.current_kpts = extract_kpts(frame)
-                #cv2.imshow(frame)
-
 class cameraThread:
 
     def __init__(self, previewName, camId) :
@@ -75,16 +53,16 @@ class cameraThread:
         self.stream.release()
 
 thread1 = cameraThread("Camera1", 0)
-thread2 = cameraThread("Camera2", 1)
+#thread2 = cameraThread("Camera2", 1)
 thread1.start()
-thread2.start()
+#thread2.start()
 
 while True :
 
     frame = thread1.read()
     kpts = thread1.readKpts()
-    frame2 = thread2.read()
-    kpts2 = thread2.readKpts()
+    #frame2 = thread2.read()
+    #kpts2 = thread2.readKpts()
 
     #if TODO: frame.timestamp == frame2.timestamp:
     
@@ -104,7 +82,7 @@ while True :
     print(kpts)
     
     cv2.imshow('webcam', frame)
-    cv2.imshow('webcam2', frame2)
+    #cv2.imshow('webcam2', frame2)
 
     if cv2.waitKey(1) == 27 :
         break

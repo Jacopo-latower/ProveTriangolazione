@@ -348,3 +348,169 @@ INFO - Function evaluations 100, initial cost 2.5940e+04, final cost 2.5646e+04,
 INFO - Adjust_outliers end: reprojection RMS=11.439 (11.439), n=392 (392), quantiles=[ 0.6607  5.6955  8.1945 12.81   31.6479]
 INFO - Exporting calibration to C:\Users\Jacopo\ProveTriangolazione\camera_calibration\calibration.json
 INFO - Dumping state and history to C:\Users\Jacopo\ProveTriangolazione\camera_calibration\calibration.pkl
+INFO - Using boards:
+INFO - charuco_8x11 CharucoBoard {type='charuco', aruco_dict='4X4_1000', aruco_offset=0, size=(7, 10), num_ids=35, marker_length=0.027, square_length=0.035, aruco_params={}}
+INFO - Found camera directories ['cam1', 'cam2'] with 3 matching images
+INFO - Loading images..
+INFO - Loaded 6 images
+INFO - {'cam1': (640, 480), 'cam2': (640, 480)}
+INFO - Config changed, not using loaded detections in C:\Users\Jacopo\ProveTriangolazione\camera_calibration\calibration.detections.pkl
+INFO - Detecting boards..
+INFO - Writing detection cache to C:\Users\Jacopo\ProveTriangolazione\camera_calibration\calibration.detections.pkl
+INFO - Detected point counts:
+INFO - Total: 304, cameras: {'cam1': 154, 'cam2': 150}, Boards: {'charuco_8x11': 304}
+INFO - Calibrating single cameras..
+INFO - Calibrated cam1, with RMS=58.43
+INFO - Camera {'dist': array([[   0.4865,   71.8859,    0.0755,    1.2707, -252.9866]]),
+        'image_size': (640, 480),
+        'intrinsic': array([[851.5181,   0.    , 379.7008],
+              [  0.    , 590.7374, 291.1835],
+              [  0.    ,   0.    ,   1.    ]])}
+INFO - 
+INFO - Calibrated cam2, with RMS=50.55
+INFO - Camera {'dist': array([[    20.6601,   1050.8062,      0.6454,      3.6233, -14290.2722]]),
+        'image_size': (640, 480),
+        'intrinsic': array([[730.9715,   0.    , 337.8069],
+              [  0.    , 551.8619, 260.8785],
+              [  0.    ,   0.    ,   1.    ]])}
+INFO - 
+INFO - Pose counts:
+INFO - Total: 6, cameras: {'cam1': 3, 'cam2': 3}, Boards: {'charuco_8x11': 6}
+INFO - Overlaps by camera:
+INFO - [[  0. 146.]
+        [146.   0.]]
+INFO - Selected master 0 and pairs [(0, 1)]
+INFO - Estimate transform axis=0, pair (0, 1), inliers 3/3
+INFO - RMS (frobius): 1.8101 (1.8101) (deg): 75.5106 (75.5106) (trans): 1.7556 (1.7556)
+INFO - [[-0.2541 -0.0897  0.963  -0.3723]
+        [-0.0951  0.9932  0.0674 -0.0469]
+        [-0.9625 -0.0744 -0.2609  1.4594]
+        [ 0.      0.      0.      1.    ]]
+INFO - Overlaps by board:
+INFO - [[0.]]
+INFO - Selected master 0 and pairs []
+INFO - Initialisation reprojection RMS=1734.162, n=304, quantiles=[   1.4356   49.4541  113.4632 1078.7155 8922.9475]
+INFO - Beginning adjustments (3) enabled: {cameras=True, boards=False, camera_poses=True, board_poses=True, motion=True}, options: {'loss': 'linear', 'tolerance': 0.0001}
+INFO - Adjust_outliers 0: reprojection RMS=1734.162, n=304, quantiles=[   1.4356   49.4541  113.4632 1078.7155 8922.9475]
+INFO - Rejecting 6 outliers with error > 5393.58 pixels, keeping 298 / 304 inliers, (98.03%)
+INFO - Iteration     Total nfev        Cost      Cost reduction    Step norm     Optimality
+INFO - 0              1         2.9077e+08                                    1.30e+10
+INFO - 1              2         7.4325e+07      2.16e+08       1.46e+03       2.24e+09
+INFO - 2              3         1.0051e+07      6.43e+07       1.46e+03       2.95e+08
+INFO - 3              4         1.1311e+06      8.92e+06       1.32e+03       1.29e+07
+INFO - 4              6         6.3782e+05      4.93e+05       5.00e+02       6.96e+06
+INFO - 5              8         5.6719e+05      7.06e+04       4.71e+02       4.99e+06
+INFO - 6             10         5.2969e+05      3.75e+04       2.62e+02       4.18e+06
+INFO - 7             11         4.9984e+05      2.98e+04       5.24e+02       3.54e+06
+INFO - 8             12         4.5487e+05      4.50e+04       5.26e+02       7.20e+05
+INFO - 9             13         4.4872e+05      6.16e+03       5.68e+02       9.88e+05
+INFO - 10             15         4.4687e+05      1.85e+03       2.19e+02       6.34e+05
+INFO - 11             17         4.4599e+05      8.76e+02       1.11e+02       5.73e+05
+INFO - 12             18         4.4508e+05      9.10e+02       2.18e+02       4.47e+05
+INFO - 13             19         4.4367e+05      1.41e+03       2.10e+02       2.98e+05
+INFO - 14             21         4.4301e+05      6.60e+02       8.82e+01       1.73e+05
+INFO - 15             23         4.4265e+05      3.68e+02       4.23e+01       2.09e+05
+INFO - 16             24         4.4215e+05      4.92e+02       7.94e+01       1.45e+05
+INFO - 17             26         4.4180e+05      3.56e+02       4.15e+01       1.55e+05
+INFO - 18             27         4.4153e+05      2.65e+02       8.54e+01       1.29e+05
+INFO - 19             28         4.4090e+05      6.37e+02       8.08e+01       7.51e+04
+INFO - 20             30         4.4063e+05      2.63e+02       4.70e+01       6.48e+04
+INFO - 21             31         4.4048e+05      1.49e+02       1.00e+02       7.33e+04
+INFO - 22             32         4.4014e+05      3.47e+02       9.60e+01       3.61e+04
+INFO - 23             34         4.3991e+05      2.22e+02       5.00e+01       3.79e+04
+INFO - 24             35         4.3979e+05      1.26e+02       1.02e+02       4.05e+04
+INFO - 25             36         4.3958e+05      2.05e+02       1.03e+02       3.17e+04
+INFO - 26             37         4.3945e+05      1.35e+02       1.99e+02       1.17e+05
+INFO - 27             38         4.3909e+05      3.58e+02       1.96e+02       1.38e+05
+INFO - 28             39         4.3898e+05      1.07e+02       3.51e+02       4.16e+05
+INFO - 29             40         4.3851e+05      4.73e+02       7.44e+01       4.53e+04
+INFO - 30             41         4.3838e+05      1.31e+02       7.79e+01       1.89e+04
+INFO - 31             42         4.3815e+05      2.32e+02       1.63e+02       7.85e+04
+INFO - 32             43         4.3785e+05      3.02e+02       3.19e+02       2.27e+05
+INFO - 33             44         4.3723e+05      6.18e+02       2.93e+02       2.24e+05
+INFO - 34             46         4.3687e+05      3.55e+02       1.27e+02       7.50e+04
+INFO - 35             47         4.3654e+05      3.30e+02       2.35e+02       6.83e+04
+INFO - 36             48         4.3592e+05      6.23e+02       2.31e+02       1.20e+05
+INFO - 37             49         4.3541e+05      5.15e+02       2.36e+02       1.67e+05
+INFO - 38             50         4.3478e+05      6.24e+02       2.73e+02       1.93e+05
+INFO - 39             51         4.3394e+05      8.46e+02       2.98e+02       1.62e+05
+INFO - 40             52         4.3295e+05      9.83e+02       3.33e+02       2.18e+05
+INFO - 41             53         4.3184e+05      1.12e+03       3.75e+02       2.64e+05
+INFO - 42             54         4.3070e+05      1.13e+03       4.04e+02       3.36e+05
+INFO - 43             55         4.2950e+05      1.20e+03       4.38e+02       3.52e+05
+INFO - 44             56         4.2832e+05      1.17e+03       4.76e+02       3.53e+05
+INFO - 45             57         4.2723e+05      1.10e+03       5.15e+02       3.54e+05
+INFO - 46             58         4.2620e+05      1.03e+03       5.56e+02       3.36e+05
+INFO - 47             59         4.2521e+05      9.92e+02       6.00e+02       2.97e+05
+INFO - 48             60         4.2436e+05      8.51e+02       6.48e+02       2.73e+05
+INFO - 49             61         4.2357e+05      7.81e+02       6.81e+02       3.05e+05
+INFO - 50             62         4.2286e+05      7.10e+02       7.14e+02       3.65e+05
+INFO - 51             63         4.2220e+05      6.61e+02       7.39e+02       4.21e+05
+INFO - 52             64         4.2157e+05      6.28e+02       7.57e+02       4.70e+05
+INFO - 53             65         4.2095e+05      6.24e+02       7.72e+02       5.02e+05
+INFO - 54             66         4.2030e+05      6.48e+02       7.82e+02       5.04e+05
+INFO - 55             67         4.1969e+05      6.13e+02       7.88e+02       4.97e+05
+INFO - 56             68         4.1899e+05      7.01e+02       7.91e+02       4.30e+05
+INFO - 57             69         4.1863e+05      3.60e+02       7.92e+02       4.94e+05
+INFO - 58             70         4.1815e+05      4.75e+02       7.86e+02       4.67e+05
+INFO - 59             71         4.1776e+05      3.92e+02       7.88e+02       5.18e+05
+INFO - 60             72         4.1680e+05      9.62e+02       7.69e+02       3.47e+05
+INFO - 61             73         4.1660e+05      1.96e+02       7.68e+02       4.55e+05
+INFO - 62             74         4.1576e+05      8.43e+02       7.58e+02       2.65e+05
+INFO - 63             75         4.1540e+05      3.63e+02       7.19e+02       3.95e+05
+INFO - 64             76         4.1476e+05      6.34e+02       7.31e+02       1.56e+05
+INFO - 65             78         4.1444e+05      3.23e+02       2.55e+02       1.32e+05
+INFO - 66             79         4.1418e+05      2.59e+02       5.87e+02       1.40e+05
+INFO - 67             81         4.1399e+05      1.95e+02       2.85e+02       1.37e+05
+INFO - 68             82         4.1373e+05      2.57e+02       5.80e+02       1.72e+05
+INFO - 69             83         4.1352e+05      2.11e+02       5.71e+02       2.90e+05
+INFO - 70             84         4.1315e+05      3.68e+02       5.80e+02       1.92e+05
+INFO - 71             86         4.1291e+05      2.41e+02       2.80e+02       1.21e+05
+INFO - 72             87         4.1268e+05      2.31e+02       5.77e+02       1.28e+05
+INFO - 73             88         4.1245e+05      2.25e+02       5.67e+02       2.37e+05
+INFO - 74             89         4.1212e+05      3.31e+02       5.79e+02       1.23e+05
+INFO - 75             91         4.1193e+05      1.97e+02       2.62e+02       8.87e+04
+INFO - 76             92         4.1173e+05      1.99e+02       5.56e+02       1.04e+05
+INFO - 77             94         4.1156e+05      1.72e+02       2.71e+02       7.55e+04
+INFO - 78             95         4.1136e+05      1.98e+02       5.55e+02       1.22e+05
+INFO - 79             97         4.1119e+05      1.71e+02       2.69e+02       7.45e+04
+INFO - 80             98         4.1100e+05      1.84e+02       5.54e+02       1.16e+05
+INFO - 81             100        4.1084e+05      1.60e+02       2.73e+02       8.64e+04
+INFO - The maximum number of function evaluations is exceeded.
+INFO - Function evaluations 100, initial cost 2.9077e+08, final cost 4.1084e+05, first-order optimality 8.64e+04.
+INFO - Adjust_outliers 1: reprojection RMS=52.510 (57.300), n=298 (304), quantiles=[  1.7137  21.8181  49.3088  65.7495 224.8666]
+INFO - Rejecting 0 outliers with error > 328.75 pixels, keeping 304 / 304 inliers, (100.00%)
+INFO - Iteration     Total nfev        Cost      Cost reduction    Step norm     Optimality
+INFO - 0              1         4.9907e+05                                    1.09e+07
+INFO - 1              3         4.5470e+05      4.44e+04       1.53e+02       2.09e+06
+INFO - 2              4         4.4116e+05      1.35e+04       4.19e+02       2.84e+06
+INFO - 3              5         4.3663e+05      4.53e+03       4.86e+02       1.11e+06
+INFO - 4              7         4.3556e+05      1.07e+03       3.20e+02       2.12e+05
+INFO - 5              8         4.3530e+05      2.60e+02       7.45e+02       5.88e+05
+INFO - 6              9         4.3492e+05      3.77e+02       9.37e+02       5.23e+05
+INFO - 7             11         4.3470e+05      2.22e+02       4.96e+02       2.03e+05
+INFO - 8             12         4.3445e+05      2.51e+02       1.01e+03       3.30e+05
+INFO - 9             13         4.3427e+05      1.74e+02       2.11e+03       9.95e+05
+INFO - 10             14         4.3364e+05      6.37e+02       2.31e+03       6.15e+05
+INFO - 11             15         4.3341e+05      2.23e+02       5.01e+03       1.28e+06
+INFO - 12             16         4.3272e+05      6.91e+02       1.13e+03       9.58e+04
+INFO - 13             18         4.3265e+05      7.34e+01       5.97e+02       6.09e+04
+INFO - 14             19         4.3252e+05      1.29e+02       1.25e+03       1.12e+05
+INFO - 15             20         4.3245e+05      6.84e+01       2.46e+03       5.82e+05
+INFO - 16             21         4.3233e+05      1.17e+02       4.73e+02       5.72e+05
+INFO - 17             22         4.3220e+05      1.30e+02       3.54e+02       8.70e+04
+INFO - 18             23         4.3216e+05      4.18e+01       7.57e+02       8.30e+04
+INFO - `ftol` termination condition is satisfied.
+INFO - Function evaluations 23, initial cost 4.9907e+05, final cost 4.3216e+05, first-order optimality 8.30e+04.
+INFO - Adjust_outliers 2: reprojection RMS=53.321 (53.321), n=304 (304), quantiles=[  0.2504  20.6466  48.065   66.8779 105.0422]
+INFO - Rejecting 0 outliers with error > 334.39 pixels, keeping 304 / 304 inliers, (100.00%)
+INFO - Iteration     Total nfev        Cost      Cost reduction    Step norm     Optimality
+INFO - 0              1         4.3216e+05                                    8.30e+04
+INFO - 1              2         4.3211e+05      5.10e+01       4.06e+02       9.82e+04
+INFO - 2              3         4.3207e+05      4.50e+01       4.39e+02       5.26e+04
+INFO - 3              4         4.3203e+05      3.76e+01       3.67e+02       8.34e+04
+INFO - `ftol` termination condition is satisfied.
+INFO - Function evaluations 4, initial cost 4.3216e+05, final cost 4.3203e+05, first-order optimality 8.34e+04.
+INFO - Adjust_outliers end: reprojection RMS=53.313 (53.313), n=304 (304), quantiles=[  0.2555  20.6221  47.4488  66.8968 105.2918]
+INFO - Exporting calibration to C:\Users\Jacopo\ProveTriangolazione\camera_calibration\calibration.json
+INFO - Dumping state and history to C:\Users\Jacopo\ProveTriangolazione\camera_calibration\calibration.pkl
