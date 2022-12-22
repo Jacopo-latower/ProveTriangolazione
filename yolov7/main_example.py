@@ -18,7 +18,7 @@ if torch.cuda.is_available:
 
 
 def load_model():
-    model = torch.load('yolov7-w6-pose.pt', map_location=device)['model']
+    model = torch.load('yolov7/yolov7-w6-pose.pt', map_location=device)['model']
     # Put in inference mode
     model.float().eval()
 
@@ -64,7 +64,7 @@ def draw_keypoints(output, image):
 def pose_estimation_video(filename):
 
     if filename == '0':
-        cap = cv2.VideoCapture(1)
+        cap = cv2.VideoCapture(0)
     else:
         cap = cv2.VideoCapture(filename)
 

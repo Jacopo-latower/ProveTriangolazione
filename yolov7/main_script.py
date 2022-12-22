@@ -35,7 +35,6 @@ class cameraThread:
     def readKpts(self):
         self.read_lock.acquire()
         kpts = self.current_kpts.copy()
-        print(kpts)
         self.read_lock.release()
         return kpts
 
@@ -61,6 +60,7 @@ while True :
 
     frame = thread1.read()
     kpts = thread1.readKpts()
+    print(kpts)
     #frame2 = thread2.read()
     #kpts2 = thread2.readKpts()
 
@@ -79,7 +79,7 @@ while True :
         p3ds.append(_p3d)
     p3ds = np.array(p3ds)
     '''    
-    print(kpts)
+    #print(kpts)
     
     cv2.imshow('webcam', frame)
     #cv2.imshow('webcam2', frame2)
@@ -88,7 +88,7 @@ while True :
         break
 
 thread1.stop()
-thread2.stop()
+#thread2.stop()
 
 '''
 while True:
